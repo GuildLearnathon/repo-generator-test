@@ -1,0 +1,28 @@
+### Reminder to Reviewers
+
+Please follow: [conventional comments](https://conventionalcomments.org/) while reviewing this PR
+
+## What does this pull request do?
+
+___
+## What is the relevant story?
+
+
+---
+## Acceptance testing
+<!---
+How did you acceptance test this?
+How can someone else confirm this works?
+--->
+
+___
+## Checklist
+- [ ] Unit Tests Added
+- [ ] Integration Tests Added
+- [ ] Updated Versioning using Semantic Versioning
+- [ ] Added people to review PR before opening it
+- [ ] Acceptance Tested
+
+___
+## How do you feel?
+![](LINK_TO_GIPHY_IMAGE_HERE)
