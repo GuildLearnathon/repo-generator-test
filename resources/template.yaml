@@ -1,0 +1,37 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: this is a test repo
+Parameters:
+  StageName:
+    Type: String
+    Default: dev
+    AllowedValues:
+      - dev
+      - staging
+      - prod
+    Description: The Lambda Function stage
+  LambdaName:
+    Type: String
+    Default: test-lambda
+    Description: the service name
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Runtime: python3.9
+    CodeUri: package.zip
+    Timeout: 300
+    MemorySize: 1024
+  Tags:
+    Owner: ''
+    Contact: ''
+    Repo: 'GuildLearnathon/repo-generator-test'
+    Service: ''
+
+Resources:
+  testLambda:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      AutoPublishAlias: current
+      FunctionName: !Sub ${LambdaName}-${StageName}
+      Handler: main.handler
