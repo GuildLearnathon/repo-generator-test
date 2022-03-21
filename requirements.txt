@@ -1,0 +1,4 @@
+# Put the requirements for your project here
+pytest
+uuid
+aws_cdk
